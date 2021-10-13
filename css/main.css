@@ -1,0 +1,316 @@
+/*
+    Problems list: 
+        x-axis scroll bar problem.
+
+
+*/
+
+/* 
+color scheam:
+    green: #1CA94C;
+
+    darkis color: #232B36;
+    dark: #1C1B1E;
+    light color: #FFFFFF;
+
+font-family:
+
+
+
+*/
+:root {
+    --main-color: #232B36;
+    --main-l-color: #3f526b;
+    --main-dark-color: #1C1B1E;
+    --secondry-color: #1CA94C;
+    --light-color: #ffffff;
+    --main-font: font-family: 'Consolas';
+}
+
+@font-face {
+    font-family: 'Consolas';
+    src: url('../font/Consolas.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: 'Consolas';
+    src: url('../font/Consolas.woff') format('woff');
+    font-weight: bolder;
+    font-style: normal;
+    scroll-behavior: smooth;
+}
+
+
+.content-icon {
+    width: 40px;
+    padding: 10px;
+    border-radius: 60%;
+    outline: 1px solid black;
+    background-color: VAR(--secondry-color);
+
+}
+.social-icon {
+    width: 20px;
+}
+*{
+    margin: 0;
+    padding: 0; 
+}
+
+body {
+    background: var(--light-color);
+    overflow-x: auto;
+
+    background-image: url(../img/main-bg.jpg);
+    background-color: blue;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+/*main css start from hear*/
+.top-bar {
+    background-color: var(--secondry-color);
+    width: 100vw;
+    height: 2vh;
+    
+}
+.top-bar .circle {
+    color: var(--light-color);
+    font-size: 1.6em;
+    margin-left: .25em;
+    letter-spacing: 2.5px;
+    line-height: .75;
+}
+
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 5vw 95vw;    
+}
+
+.nav-container {
+    color: var(--main-l-color);
+    height: 95vh;
+    display: grid;
+    grid-template-rows: auto auto auto ;
+    background-color: var(--main-color);
+    justify-content: center;
+    align-content: space-between;
+    padding: 1em 0em;
+
+}
+
+/* .nav-item-container {
+    border: 1px solid white;
+} */
+
+.nav-item-container .logo {
+    width:40px;
+    margin-left: 6px; 
+}
+
+.nav-item-container li {
+    font-family: 'Consolas';
+    font-weight: 700;
+    writing-mode: vertical-rl;
+    list-style-type: none ;
+    margin: 0px auto 3em;
+    transform: rotate(180deg);
+    transition: all .2s ease;
+}
+ 
+
+.nav-item-container li:hover {
+    border: hidden;
+    border-top: 3px solid var(--light-color);
+    color: var(--light-color);
+    cursor: pointer;
+}
+
+.nav-social-icon-container {
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    align-content: space-around;
+    padding: 1.2em 1.1em;
+    
+}
+
+.social-icon {
+    margin: .4em 0em;
+    border-radius: 60%;
+    background-image: radial-gradient(#81a0cc, var(--main-color));
+    transform: scale(1.2)
+}
+
+/* Nav item style end hear. */
+
+/*........................................................................*/
+
+/*site content style start forme hear*/
+
+/* .content-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 1px solid greenyellow;
+} */
+.content-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    justify-content: end;
+    align-content: end;
+    width: 75vw;
+    margin-left: auto;
+    margin-bottom: 1em;
+}
+
+
+
+
+/*Main content start from hear*/
+.main-content {
+    /* align-self: flex-end; */
+    background-color: var(--main-color);
+    color: var(--light-color);
+    padding:1em 10em 1em 1em;
+    font-family: 'Consolas', sans-serif;
+    
+}
+.main-content .body-tag {
+    color: var(--main-l-color);
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    
+}
+
+.main-content .h1-tag {
+    margin-left: 1.9rem;
+    margin-top: .5rem;
+    margin-bottom: -1rem;
+    color: var(--main-l-color);
+}
+
+.h1-tag-end {
+    color: var(--main-l-color);
+    font-weight: normal;
+    font-size: 16px; 
+}
+
+.main-content .main-content-text {
+    margin-left: 2rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem; 
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.p-tag-container {
+    display: flex;
+    margin-left: 1rem
+}
+
+.p-tag-container p {
+    color: #b4b4b4;
+    flex-shrink: 0;
+    font-size: 10px;
+}
+
+.p-tag,.p-tag-end {
+    color: var(--main-l-color);
+    margin: 0rem .7rem;
+    font-size: 10px;
+}
+
+.main-content .main-content-text .name-first-word {
+    color: var(--secondry-color);
+    text-shadow: -4px 2px 0px var(--light-color);
+}
+
+.d-font {
+    font-family:'Italianno', cursive;
+}
+/*Main content style end hear*/
+
+
+.sub-content-container {
+    display: flex;
+    flex-direction: row;
+    background-color: gray;
+    border: 1px solid blue;
+}
+
+/* .git-link {
+    background-color: var(--secondry-color);
+
+} */
+
+.cases-container {
+    display:flex;
+    flex-basis: 50%;
+    padding: 1.5rem;
+    padding:1.5;
+    color: var(--main-dark-color);
+    background-color: var(--light-color);
+}
+
+.cases-container .cases-icon {
+    align-self: center;
+    margin-right:1rem;
+}
+
+.contact {
+    display: flex;
+    flex-basis: 50%;
+    padding: 1.5rem;
+    color: var(--light-color);
+    background-color: var(--main-dark-color); 
+
+}
+
+.contact .contact-icon {
+    align-self: center;
+    margin-right:1rem;
+}
+
+.sub-content {
+    align-self: center;
+}
+
+.sub-content h3 {
+    font-family: 'Consolas';
+    font-weight: bolder;
+}
+
+.sub-content p {
+    margin-top: .7em;
+    font-family: 'Consolas';
+    font-weight: normal;
+    text-align: justify;
+    color: rgb(145, 155, 161);
+}
+
+
+
+/*Footer sevction start form hear*/
+.footer-container ul {
+    background-color: var(--main-l-color);
+    color: var(--light-color);
+    height: 5vh;
+    width: 100vw;
+    display:flex;
+    justify-content: center;
+    
+}
+
+.footer-container li {
+    list-style-type: none;
+    margin-right: 20px;
+    align-self: center;
+}
+
