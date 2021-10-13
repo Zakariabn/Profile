@@ -64,7 +64,7 @@ body {
     overflow-x: auto;
 
     background-image: url(../img/main-bg.jpg);
-    background-color: blue;
+    background-color: var(--main-l-color);
     background-repeat: no-repeat;
     background-size: cover;
     
